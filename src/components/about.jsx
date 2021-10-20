@@ -22,7 +22,7 @@ function About() {
         <div className="perfil-usuario-body">
             <div className="perfil-usuario-bio">
                 <h3 className="titulo">Matias Oscar Taborda</h3>
-                <p className="texto">Joven Argentino Full Stack Developer,estudiante de Ing Informatica </p>
+                <p className="texto">Joven Argentino Full Stack Developer y futuro Ingeníero Informatico,siendo alguien responsable, amable, compañero </p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
@@ -31,20 +31,20 @@ function About() {
                     <li><img src="https://i.ibb.co/DgWh0tN/images.png" width={"60px"}/>
                     <img src="https://i.ibb.co/8bWDSm0/nodejs-original-wordmark-logo-icon-146412.png" width={"100px"}/>                   
                    <img src=" https://i.ibb.co/9qVg5SS/postgres.png" width={"80px"}/>
-                   <img src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"220px"}/>
+                   <img className='img-fallada' src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"300px"} />
                    </li>
                    
                 </ul>
                 <ul class="lista-datos">
                     <li><i className=""></i> Tecnologias usadas:</li>
-                    <li><img src="https://i.ibb.co/DgWh0tN/images.png" width={"60px"}/></li>
-                    <li><img src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"220px"}/></li>
+                    <li><img src="https://i.ibb.co/DgWh0tN/images.png" width={"80px"}/><img src=" https://i.ibb.co/XXkfGpK/bootstrap.png" width={"80px"}/></li>
+                    <li><img src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"300px"}/></li>
                     
                     </ul>
             </div>
             <div class="redes-sociales">
-                <a href="https://www.linkedin.com/in/matias-taborda-full-stack/" className="btn btn-primary btn-linkedin" >in</a>
-                <a src="https://i.ibb.co/gzgNxr0/git.png" href="https://github.com/matydelt" width={"50px"} border-radius={"100%"} ><i className=''></i>git</a>
+                <a href="https://www.linkedin.com/in/matias-taborda-full-stack/" className="btn btn-primary btn-linkedin" target="_blank" rel="noreferrer">in</a>
+                <a src="https://i.ibb.co/gzgNxr0/git.png" href="https://github.com/matydelt" className='btn btn-dark' target="_blank" rel="noreferrer">Git</a>
             </div>
         </div>
     </section>
