@@ -19,7 +19,7 @@ function App() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
-        if (recurso.main !== undefined) {
+        if (recurso.main !== undefined && !cities.find(e => e.id === recurso.id)) {
           const ciudad = {
             min: Math.round(recurso.main.temp_min),
             max: Math.round(recurso.main.temp_max),
@@ -35,7 +35,8 @@ function App() {
           };
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
-          alert("Ciudad no encontrada");
+          if (cities.find(e => e.id === recurso.id)) return alert("Esta ciudad ya esta siendo mostrada")
+          alert("Ciudad no encontrada ");
         }
       });
   }
