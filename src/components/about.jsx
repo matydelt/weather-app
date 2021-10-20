@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./about.css"
@@ -9,12 +10,9 @@ function About() {
         <div className="perfil-usuario-header">
             <div className="perfil-usuario-portada">
                 <div className="perfil-usuario-avatar">
-                    <img src="" alt="img-avatar"/>
-                    <button type="button" className="boton-avatar">
-                        <i className="far fa-image"></i>
-                    </button>
+                    <img src="https://i.ibb.co/LSrJMd3/asfasfasf.jpg" alt="img-avatar"/>                    
                 </div>
-                <Link to="/ciudad"><button type="button" className="boton-portada">
+                <Link to="/"><button type="button" className="boton-portada">
                    Volver
                 </button>
                 </Link>
@@ -24,25 +22,29 @@ function About() {
         <div className="perfil-usuario-body">
             <div className="perfil-usuario-bio">
                 <h3 className="titulo">Matias Oscar Taborda</h3>
-                <p className="texto">Full Stack Developer,</p>
+                <p className="texto">Joven Argentino Full Stack Developer,estudiante de Ing Informatica </p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li><i className="icono fas fa-map-signs"></i> Direccion de usuario:</li>
-                    <li><i className="icono fas fa-phone-alt"></i> Telefono:</li>
-                    <li><i className="icono fas fa-briefcase"></i> Trabaja en.</li>
-                    <li><i className="icono fas fa-building"></i> Cargo</li>
+                    <a href="https://www.linkedin.com/in/matias-taborda-full-stack/" className="boton-redes facebook fab fa-facebook-f" ><i className="icon-facebook"></i></a>
+                    <li><i className="icono fas fa-building"></i> Conocimientos: </li>
+                    <li><img src="https://i.ibb.co/DgWh0tN/images.png" width={"60px"}/>
+                    <img src="https://i.ibb.co/8bWDSm0/nodejs-original-wordmark-logo-icon-146412.png" width={"100px"}/>                   
+                   <img src=" https://i.ibb.co/9qVg5SS/postgres.png" width={"80px"}/>
+                   <img src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"220px"}/>
+                   </li>
+                   
                 </ul>
                 <ul class="lista-datos">
-                    <li><i className="icono fas fa-map-marker-alt"></i> Ubicacion:</li>
-                    <li><i className="icono fas fa-calendar-alt"></i> Fecha nacimiento:9/8/1997</li>
-                    <li><i className="icono fas fa-user-check"></i> Registro.</li>
-                    <li><i className="icono fas fa-share-alt"></i> Redes sociales.</li></ul>
+                    <li><i className=""></i> Tecnologias usadas:</li>
+                    <li><img src="https://i.ibb.co/DgWh0tN/images.png" width={"60px"}/></li>
+                    <li><img src="https://i.ibb.co/zZpr8rX/html-js-css.jpg" width={"220px"}/></li>
+                    
+                    </ul>
             </div>
             <div class="redes-sociales">
-                <a href="https://www.linkedin.com/in/matias-taborda-full-stack/" className="boton-redes facebook fab fa-facebook-f" >in<i className="icon-facebook"></i></a>
-                <a href="https://github.com/matydelt" className="boton-redes twitter fab fa-twitter">git</a>
-                {/* <a href="" className="boton-redes instagram fab fa-instagram"></a> */}
+                <a href="https://www.linkedin.com/in/matias-taborda-full-stack/" className="btn btn-primary btn-linkedin" >in</a>
+                <a src="https://i.ibb.co/gzgNxr0/git.png" href="https://github.com/matydelt" width={"50px"} border-radius={"100%"} ><i className=''></i>git</a>
             </div>
         </div>
     </section>

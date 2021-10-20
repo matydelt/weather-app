@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background:url("https://i.ibb.co/DMN0rmS/27665.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
 }
 
 .row {
