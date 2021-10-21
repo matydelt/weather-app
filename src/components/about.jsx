@@ -12,7 +12,7 @@ function About() {
                 <div className="perfil-usuario-avatar">
                     <img src="https://i.ibb.co/LSrJMd3/asfasfasf.jpg" alt="img-avatar"/>                    
                 </div>
-                <Link to="/"><button type="button" className="boton-portada">
+                <Link to="/weather-app/"><button type="button" className="boton-portada">
                    Volver
                 </button>
                 </Link>

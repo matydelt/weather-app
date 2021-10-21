@@ -51,18 +51,21 @@ function App() {
   }
   return (
     <div className="App">
-      <Route path='/weather-app/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
-      <Route path='/weather-app/' exact render={() => (<Cards
-        cities={cities}
-        onClose={onClose}
-      />)}
-      />
-      <Route path='/ciudad/:ciudadId' exact render={({ match }) => {
-        const city = onFilter(match.params.ciudadId)
-        return <Ciudad city={city} />;
-      }} />
+      <Route basename={process.env.PUBLIC_URL}>
 
-      <Route path='/about' exact component={About} />
+        <Route path='/weather-app/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
+        <Route path='/weather-app/' exact render={() => (<Cards
+          cities={cities}
+          onClose={onClose}
+        />)}
+        />
+        <Route path='/ciudad/:ciudadId' exact render={({ match }) => {
+          const city = onFilter(match.params.ciudadId)
+          return <Ciudad city={city} />;
+        }} />
+
+        <Route path='/about' exact component={About} />
+      </Route>
     </div>
   );
 }
