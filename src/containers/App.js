@@ -11,7 +11,7 @@ const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 function App() {
   const [cities, setCities] = useState([]);
-  const [error, setError] = useState(undefined)
+  const [error, setError] = useState("")
   function onClose(id) {
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
@@ -34,10 +34,11 @@ function App() {
             latitud: recurso.coord.lat,
             longitud: recurso.coord.lon
           };
+          setError("")
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
-          if (cities.find(e => e.id === recurso.id)) return setError(1)
-          return setError(0)
+          if (cities.find(e => e.id === recurso.id)) return setError("Esta ciudad ya esta siendo mostrada!")
+          return setError("Esta ciudad no existe!")
         }
       });
   }
@@ -53,7 +54,7 @@ function App() {
     <div className="App">
       <Route basename={process.env.PUBLIC_URL}>
 
-        <Route path='/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
+        <Route path='/' exact render={() => (<Nav onSearch={onSearch} setError={setError} error={error} />)} />
         <Route path='/' exact render={() => (<Cards
           cities={cities}
           onClose={onClose}

@@ -6,7 +6,7 @@ import './Nav.css';
 
 
 
-function Nav({ onSearch, error }) {
+function Nav({ onSearch, setError, error }) {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <Link to='/'>
@@ -16,7 +16,8 @@ function Nav({ onSearch, error }) {
         </span>
       </Link>
         <SearchBar
-          onSearch={onSearch}/>
+          onSearch={onSearch} setError={setError} error={error}/>
+          
       <Link to='/about'>
         <span>About Me</span>
         </Link>
@@ -24,14 +25,6 @@ function Nav({ onSearch, error }) {
     </nav>
   );
 };
-export const validate = function (input) {
-  let errors = { };
-  if (!input.username) {
-      errors.username = 'Username is required';
-  } else if (!/\S+@\S+\.\S+/.test(input.username)) {
-      errors.username = 'Username is invalid';
-  }  
-  return errors;
-};
+
 
 export default Nav;

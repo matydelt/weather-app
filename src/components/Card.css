@@ -1,10 +1,10 @@
 .card {
   margin: 20px;
   width: 18rem;
-  background-color: rgb(214, 214, 214);
   background:url("https://i.ibb.co/ZWR3P7R/Cumulonimbo-SE-de-Caracas.jpg");
   border: 1px solid black;
   color:rgb(255, 255, 255);
+  background-size: cover;
 }
 
 .card-title {
@@ -24,7 +24,7 @@
   padding-top: 0px !important;
 }
 .img-card{
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(203 203 203);
   border-radius: 100%;
 }
 .btn-card{
