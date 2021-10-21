@@ -53,8 +53,8 @@ function App() {
     <div className="App">
       <Route basename={process.env.PUBLIC_URL}>
 
-        <Route path='/weather-app/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
-        <Route path='/weather-app/' exact render={() => (<Cards
+        <Route path='/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
+        <Route path='/' exact render={() => (<Cards
           cities={cities}
           onClose={onClose}
         />)}

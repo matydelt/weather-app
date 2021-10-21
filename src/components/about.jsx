@@ -12,7 +12,7 @@ function About() {
                 <div className="perfil-usuario-avatar">
                     <img src="https://i.ibb.co/LSrJMd3/asfasfasf.jpg" alt="img-avatar"/>                    
                 </div>
-                <Link to="/weather-app/"><button type="button" className="boton-portada">
+                <Link to="/"><button type="button" className="boton-portada">
                    Volver
                 </button>
                 </Link>
@@ -22,7 +22,8 @@ function About() {
         <div className="perfil-usuario-body">
             <div className="perfil-usuario-bio">
                 <h3 className="titulo">Matias Oscar Taborda</h3>
-                <p className="texto">Joven Argentino Full Stack Developer y futuro Ingeníero Informatico,siendo alguien responsable, amable, compañero </p>
+                <p className="texto">Joven Argentino Full Stack Developer y futuro Ingeníero Informatico,siendo alguien responsable,y capaz de trabajar en equipos me encuentro buscando
+                mi primer trabajo en el mundo IT  </p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
