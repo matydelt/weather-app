@@ -11,6 +11,7 @@ const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 function App() {
   const [cities, setCities] = useState([]);
+  const [error, setError] = useState(undefined)
   function onClose(id) {
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
@@ -35,8 +36,8 @@ function App() {
           };
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
-          if (cities.find(e => e.id === recurso.id)) return alert("Esta ciudad ya esta siendo mostrada")
-          alert("Ciudad no encontrada ");
+          if (cities.find(e => e.id === recurso.id)) return setError(1)
+          return setError(0)
         }
       });
   }
@@ -50,7 +51,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Route path='/' exact render={() => (<Nav onSearch={onSearch} />)} />
+      <Route path='/' exact render={() => (<Nav onSearch={onSearch} error={error} />)} />
       <Route path='/' exact render={() => (<Cards
         cities={cities}
         onClose={onClose}

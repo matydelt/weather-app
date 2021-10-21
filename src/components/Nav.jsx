@@ -6,7 +6,7 @@ import './Nav.css';
 
 
 
-function Nav({ onSearch }) {
+function Nav({ onSearch, error }) {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <Link to='/'>
@@ -23,6 +23,15 @@ function Nav({ onSearch }) {
 
     </nav>
   );
+};
+export const validate = function (input) {
+  let errors = { };
+  if (!input.username) {
+      errors.username = 'Username is required';
+  } else if (!/\S+@\S+\.\S+/.test(input.username)) {
+      errors.username = 'Username is invalid';
+  }  
+  return errors;
 };
 
 export default Nav;
