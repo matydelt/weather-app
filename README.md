@@ -8,3 +8,6 @@ Una app creada durante el bootcamp de #SoyHenry como ejercicio  utilizando React
 
 1. npm install
 2. npm start
+
+![](https://i.ibb.co/6tzt1fh/weather-app.png)
+![](https://i.ibb.co/kBR836B/about-weather.png)
